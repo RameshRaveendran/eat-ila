@@ -1,6 +1,6 @@
 function LeafCard({ leafType, quantity, location, description }) {
   return (
-    <article>
+    <article className="leaf-card">
       <h3>{leafType}</h3>
 
       <p>Quantity: {quantity}</p>
