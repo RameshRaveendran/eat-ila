@@ -122,3 +122,14 @@ nav {
 .footer p {
   margin: 0;
 }
+
+
+.roundlogo {
+  width: 70px;
+  height: auto;
+}
+
+header img {
+  width: 200px;
+  height: auto;
+}
