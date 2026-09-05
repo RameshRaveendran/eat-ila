@@ -1,8 +1,8 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import LeafCard from "./components/LeafCard";
-import { leaves } from './data'
-
+import { leaves } from "./data";
+import "./App.css";
 
 function App() {
   return (
@@ -10,23 +10,23 @@ function App() {
       <Header />
 
       <main>
-
         <Hero />
 
-        <section>
+        <section className="leaf-listings">
           <h2>Available Leaves</h2>
 
-          {leaves.map((leaf) => (
-            <LeafCard
-              key={leaf.leafType}
-              leafType={leaf.leafType}
-              quantity={leaf.quantity}
-              location={leaf.location}
-              description={leaf.description}
-            />
-          ))}
+          <div className="leaf-grid">
+            {leaves.map((leaf) => (
+              <LeafCard
+                key={leaf.leafType}
+                leafType={leaf.leafType}
+                quantity={leaf.quantity}
+                location={leaf.location}
+                description={leaf.description}
+              />
+            ))}
+          </div>
         </section>
-
       </main>
     </>
   );
