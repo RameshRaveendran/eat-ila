@@ -65,8 +65,60 @@ nav {
   cursor: pointer;
 }
 
+
+.about {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.testimonials {
+  padding: 60px 40px;
+}
+
+.testimonials h2 {
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.testimonial-card {
+  padding: 24px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.testimonial-card h3 {
+  margin: 0 0 12px;
+}
+
+.testimonial-card p {
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+
 @media (max-width: 768px) {
-  .leaf-grid {
+  .leaf-grid,
+  .testimonial-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.footer {
+  padding: 30px 40px;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
 }

@@ -17,4 +17,22 @@ export const leaves = [
     location: 'Erattupetta',
     description: 'Fresh banana leaves available for animals.',
   },
-]
+];
+
+export const testimonials = [
+  {
+    name: 'Anu',
+    message: 'I found fresh leaves easily through eat.ഇല.',
+    location: 'Kottayam',
+  },
+  {
+    name: 'Binu',
+    message: 'A simple way to share naturally available leaves.',
+    location: 'Pala',
+  },
+  {
+    name: 'Meera',
+    message: 'The platform makes connecting with local providers easier.',
+    location: 'Erattupetta',
+  },
+];
