@@ -3,11 +3,13 @@ import Hero from "./components/Hero";
 import LeafCard from "./components/LeafCard";
 import About from "./components/About";
 import TestimonialCard from "./components/TestimonialCard";
-import Footer from './components/Footer'
+import Footer from "./components/Footer";
+import LeafDetails from "./pages/LeafDetails";
 import { leaves, testimonials } from "./data";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
-function App() {
+function Home() {
   return (
     <>
       <Header />
@@ -38,7 +40,8 @@ function App() {
           <div className="leaf-grid">
             {leaves.map((leaf) => (
               <LeafCard
-                key={leaf.leafType}
+                key={leaf.id}
+                id={leaf.id}
                 leafType={leaf.leafType}
                 quantity={leaf.quantity}
                 location={leaf.location}
@@ -48,8 +51,18 @@ function App() {
           </div>
         </section>
       </main>
+
       <Footer />
     </>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/leaves/:id" element={<LeafDetails />} />
+    </Routes>
   );
 }
 

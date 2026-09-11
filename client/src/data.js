@@ -1,17 +1,20 @@
 export const leaves = [
+ {
+  id: '1',
+  leafType: 'Neem Leaves',
+  quantity: '10 kg',
+  location: 'Kottayam',
+  description: 'Fresh neem leaves available for cattle feed.',
+},
   {
-    leafType: 'Neem Leaves',
-    quantity: '10 kg',
-    location: 'Kottayam',
-    description: 'Fresh neem leaves available for cattle feed.',
-  },
-  {
+    id: '2',
     leafType: 'Mango Leaves',
     quantity: '5 kg',
     location: 'Pala',
     description: 'Fresh mango leaves available.',
   },
   {
+    id: '3',
     leafType: 'Banana Leaves',
     quantity: '15 kg',
     location: 'Erattupetta',
