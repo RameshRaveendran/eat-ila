@@ -133,3 +133,31 @@ header img {
   width: 200px;
   height: auto;
 }
+
+/* single leaf details cards */
+
+.leaf-details {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 32px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.leaf-details h2 {
+  margin-top: 0;
+  font-size: 32px;
+}
+
+.leaf-details p {
+  margin: 12px 0;
+  line-height: 1.6;
+}
+
+.leaf-details button {
+  margin-top: 20px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
