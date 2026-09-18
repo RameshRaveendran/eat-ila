@@ -16,14 +16,14 @@ nav {
 }
 
 .hero h2 {
-  font-size: 48px;
+  font-size: 100px;
   margin: 0 0 20px;
 }
 
 .hero p {
   max-width: 600px;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.6;
 }
 
