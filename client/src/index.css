@@ -1,29 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
-
+:root {
+  /* Rich Dark Theme Palette */
+  --bg-main: #121d18;          /* Primary Dark Background */
+  --bg-section-alt: #16241e;  /* Subtle Alternating Background */
+  --bg-surface: #1d2e26;      /* Dark Green Card Surface */
+  --bg-surface-hover: #263c32;/* Elevated Hover Surface */
+  --header-bg: rgba(18, 29, 24, 0.95);
+  
+  --primary: #40916c;         /* Emerald Green */
+  --primary-hover: #52b788;   /* Lighter Emerald */
+  --accent: #74c69d;          /* Leaf Green Accent */
+  --accent-glow: rgba(82, 183, 136, 0.12);
+  
+  --text-main: #f0f6f3;       /* Crisp Bright Text */
+  --text-muted: #a3c1ad;      /* Soft Muted Text */
+  
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+}
 
 * {
   box-sizing: border-box;
-  background-color: rgb(126, 190, 126);
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  font-family: "Original Surfer", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  word-spacing: 0.2rex;
-  letter-spacing: 0.2rex;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
-
-
 
 a {
   text-decoration: none;
-  font-weight: 700;
-  color: rgb(245, 243, 243);
+  color: var(--accent);
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
 }
 
 button {
-  font: inherit;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
 }

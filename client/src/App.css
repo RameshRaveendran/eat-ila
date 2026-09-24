@@ -1,163 +1,263 @@
+/* Header & Navigation */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  padding: 18px 5%;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+header img {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+}
+
+.roundlogo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
 }
 
 nav {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 28px;
 }
 
+nav a {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Hero Section */
 .hero {
-  padding: 80px 40px;
+  padding: 90px 20px 70px;
   text-align: center;
+  background: radial-gradient(circle at 50% 20%, rgba(64, 145, 108, 0.2) 0%, var(--bg-main) 80%);
 }
 
 .hero h2 {
-  font-size: 100px;
-  margin: 0 0 20px;
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
 }
 
 .hero p {
-  max-width: 600px;
+  max-width: 650px;
   margin: 0 auto;
-  font-size: 24px;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Listings Section */
+.leaf-listings {
+  padding: 70px 5%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.leaf-listings h2 {
+  margin-bottom: 36px;
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--text-main);
+  font-weight: 700;
 }
 
 .leaf-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
 }
 
-.leaf-listings {
-  padding: 40px;
-}
-
-.leaf-listings h2 {
-  margin: 0 0 30px;
-  text-align: center;
-}
-
+/* Leaf Cards - Borderless Elevated Surface */
 .leaf-card {
-  padding: 24px;
-  border: 1px solid #0f0404;
-  border-radius: 12px;
+  background-color: var(--bg-surface);
+  padding: 26px;
+  border: none;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.leaf-card:hover {
+  transform: translateY(-4px);
+  background-color: var(--bg-surface-hover);
+  box-shadow: var(--shadow-md), 0 0 12px var(--accent-glow);
 }
 
 .leaf-card h3 {
-  margin: 0 0 12px;
-  font-size: 24px;
+  margin-bottom: 12px;
+  font-size: 1.35rem;
+  color: var(--accent);
+  font-weight: 700;
 }
 
 .leaf-card p {
   margin: 8px 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
 
-.leaf-card button {
-  margin-top: 16px;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+.leaf-card button,
+.leaf-details button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: var(--primary);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  width: 100%;
 }
 
+.leaf-card button:hover,
+.leaf-details button:hover {
+  background-color: var(--primary-hover);
+}
 
+.leaf-card button:active,
+.leaf-details button:active {
+  transform: scale(0.98);
+}
+
+/* About Section - Smooth Background Shift */
 .about {
-  padding: 60px 40px;
+  padding: 80px 20px;
   text-align: center;
+  background-color: var(--bg-section-alt);
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 16px;
 }
 
 .about p {
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.8;
+  color: var(--text-muted);
+  font-size: 1.1rem;
 }
 
+/* Testimonials Section */
 .testimonials {
-  padding: 60px 40px;
+  padding: 80px 5%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .testimonials h2 {
-  margin: 0 0 30px;
+  margin-bottom: 36px;
   text-align: center;
+  font-size: 2.2rem;
+  color: var(--text-main);
 }
 
 .testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 24px;
 }
 
 .testimonial-card {
-  padding: 24px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
+  padding: 26px;
+  background-color: var(--bg-surface);
+  border: none;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .testimonial-card h3 {
-  margin: 0 0 12px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: var(--accent);
 }
 
 .testimonial-card p {
-  margin: 0 0 12px;
-  line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .leaf-grid,
-  .testimonial-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.footer {
-  padding: 30px 40px;
-  text-align: center;
-}
-
-.footer p {
   margin: 0;
+  line-height: 1.6;
+  color: var(--text-muted);
+  font-style: italic;
+  font-size: 0.95rem;
 }
 
-
-.roundlogo {
-  width: 70px;
-  height: auto;
-}
-
-header img {
-  width: 200px;
-  height: auto;
-}
-
-/* single leaf details cards */
-
+/* Single Leaf Details View */
 .leaf-details {
   max-width: 600px;
   margin: 60px auto;
-  padding: 32px;
-  border: 1px solid #ddd;
-  border-radius: 12px;
+  padding: 36px;
+  background-color: var(--bg-surface);
+  border: none;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
 }
 
 .leaf-details h2 {
   margin-top: 0;
-  font-size: 32px;
+  font-size: 2rem;
+  color: var(--accent);
 }
 
 .leaf-details p {
-  margin: 12px 0;
-  line-height: 1.6;
+  margin: 14px 0;
+  line-height: 1.7;
+  color: var(--text-muted);
 }
 
-.leaf-details button {
-  margin-top: 20px;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+/* Footer */
+.footer {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #0b1410;
+  color: var(--text-muted);
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  header {
+    padding: 16px 20px;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .leaf-listings,
+  .testimonials {
+    padding: 50px 20px;
+  }
+
+  .leaf-details {
+    margin: 30px 20px;
+    padding: 24px;
+  }
 }
