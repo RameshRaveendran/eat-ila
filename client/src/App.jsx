@@ -1,3 +1,5 @@
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import LeafCard from "./components/LeafCard";
@@ -5,8 +7,8 @@ import About from "./components/About";
 import TestimonialCard from "./components/TestimonialCard";
 import Footer from "./components/Footer";
 import LeafDetails from "./pages/LeafDetails";
+import FallingLeaves from "./components/FallingLeaves";
 import { leaves, testimonials } from "./data";
-import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
 function Home() {
@@ -59,10 +61,16 @@ function Home() {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/leaves/:id" element={<LeafDetails />} />
-    </Routes>
+    <div className="app-container">
+      {/* Background Falling Leaves Animation */}
+      <FallingLeaves count={18} />
+
+      {/* Main Page Routing */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/leaves/:id" element={<LeafDetails />} />
+      </Routes>
+    </div>
   );
 }
 
