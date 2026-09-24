@@ -261,3 +261,44 @@ nav a:hover {
     padding: 24px;
   }
 }
+
+/* Container holding all floating leaves */
+.leaf-animation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Allows user to click buttons beneath leaves */
+  overflow: hidden;
+  z-index: 1; /* Sits behind content elements */
+}
+
+/* Individual Leaf Element */
+.falling-leaf {
+  position: absolute;
+  top: -10%;
+  color: var(--accent);
+  opacity: 0.35; /* Soft background overlay */
+  font-size: 1.8rem;
+  user-select: none;
+  animation: fall linear infinite;
+}
+
+/* Keyframes for smooth falling & swaying */
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg) translateX(80px);
+    opacity: 0;
+  }
+}
