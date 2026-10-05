@@ -8,6 +8,7 @@ import TestimonialCard from "./components/TestimonialCard";
 import Footer from "./components/Footer";
 import LeafDetails from "./pages/LeafDetails";
 import FallingLeaves from "./components/FallingLeaves";
+import RequestLeaves from "./pages/RequestLeaves";
 import { leaves, testimonials } from "./data";
 import "./App.css";
 
@@ -69,6 +70,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/leaves/:id" element={<LeafDetails />} />
+        <Route path="/leaves/:id/request" element={<RequestLeaves />} />
       </Routes>
     </div>
   );

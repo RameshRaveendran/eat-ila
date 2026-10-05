@@ -24,7 +24,9 @@ function LeafDetails() {
         Back to Leaves
       </button>
 
-      <button type="button">Request Leaves</button>
+      <button type="button" onClick={() => navigate(`/leaves/${id}/request`)}>
+        Request Leaves
+      </button>
     </section>
   );
 }
