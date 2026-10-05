@@ -12,19 +12,23 @@ function LeafDetails() {
     return <p>Leaf not found</p>;
   }
 
-return (
-  <section className="leaf-details">
-    <h2>{selectedLeaf.leafType}</h2>
+  return (
+    <section className="leaf-details">
+      <h2>{selectedLeaf.leafType}</h2>
 
-    <p>Quantity: {selectedLeaf.quantity}</p>
-    <p>Location: {selectedLeaf.location}</p>
-    <p>{selectedLeaf.description}</p>
+      <p>Quantity: {selectedLeaf.quantity}</p>
+      <p>Location: {selectedLeaf.location}</p>
+      <p>{selectedLeaf.description}</p>
 
-    <button type="button" onClick={() => navigate('/')}>
-      Back to Leaves
-    </button>
-  </section>
-)
+      <button type="button" onClick={() => navigate("/")}>
+        Back to Leaves
+      </button>
+
+      <button type="button" onClick={() => navigate(`/leaves/${id}/request`)}>
+        Request Leaves
+      </button>
+    </section>
+  );
 }
 
 export default LeafDetails;
