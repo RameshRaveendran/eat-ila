@@ -304,3 +304,71 @@ nav a:hover {
 }
 
 
+/* Request Leaves Page */
+.request-leaves {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.request-leaves h2 {
+  margin-bottom: 10px;
+  color: #245c36;
+}
+
+.request-leaves p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.request-leaves form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.request-leaves label {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.request-leaves input,
+.request-leaves textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.request-leaves input:focus,
+.request-leaves textarea:focus {
+  outline: none;
+  border-color: #2e7d46;
+  box-shadow: 0 0 0 2px rgba(46, 125, 70, 0.12);
+}
+
+.request-leaves button {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #2e7d46;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.request-leaves button:hover {
+  background-color: #245c36;
+}
+
+.request-leaves .success-message {
+  margin-top: 20px;
+  color: #245c36;
+  font-weight: 600;
+}
