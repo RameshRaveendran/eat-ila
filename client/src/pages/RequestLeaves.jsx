@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 
@@ -7,15 +6,18 @@ function RequestLeaves() {
 
   const [quantity, setQuantity] = useState('')
   const [message, setMessage] = useState('')
+  const [submitted, setSubmitted] = useState(false)
 
   function handleSubmit(event) {
     event.preventDefault()
 
     console.log({
       listingId: id,
-      quantity,
+      quantity: Number(quantity),
       message,
     })
+
+    setSubmitted(true)
   }
 
   return (
@@ -31,7 +33,10 @@ function RequestLeaves() {
           type="number"
           min="1"
           value={quantity}
-          onChange={(event) => setQuantity(event.target.value)}
+          onChange={(event) => {
+            setQuantity(event.target.value)
+            setSubmitted(false)
+          }}
           required
         />
 
@@ -41,11 +46,20 @@ function RequestLeaves() {
           name="message"
           rows="4"
           value={message}
-          onChange={(event) => setMessage(event.target.value)}
+          onChange={(event) => {
+            setMessage(event.target.value)
+            setSubmitted(false)
+          }}
         />
 
         <button type="submit">Submit Request</button>
       </form>
+
+      {submitted && (
+        <p role="status">
+          Request submitted successfully!
+        </p>
+      )}
     </section>
   )
 }
